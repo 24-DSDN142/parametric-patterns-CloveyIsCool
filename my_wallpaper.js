@@ -9,17 +9,17 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 200;
-  pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width  = 600;
+  pWallpaper.grid_settings.cell_height = 600;
+  pWallpaper.grid_settings.row_offset  = 150;
 }
 
 function wallpaper_background() {
-  background(240, 255, 240); //light honeydew green colour
+  background(130, 27, 38); //light honeydew green colour
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  rect(600 ,600, rect_width, rect_height);
+  rect(40 ,40, rect_width, rect_height);
   
   stroke(149, 203, 245) //blue
   fill(149, 203, 245) //blue
