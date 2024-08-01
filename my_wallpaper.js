@@ -4,14 +4,14 @@ let rect_height = 20;
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 600;
-  pWallpaper.grid_settings.cell_height = 600;
-  pWallpaper.grid_settings.row_offset  = 150;
+  pWallpaper.grid_settings.cell_width  = 300;
+  pWallpaper.grid_settings.cell_height = 300;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
 
 function wallpaper_background() {
@@ -19,138 +19,125 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  rect(40 ,40, rect_width, rect_height);
-  
+ 
   stroke(149, 203, 245) //blue
   fill(149, 203, 245) //blue
-  ellipse(225,375,100,100)
-  ellipse(225,225,100,100)
-  ellipse(375,225,100,100)
-  ellipse(375,375,100,100)
+  ellipse(114,182,50,50)
+  ellipse(114,114,50,50)
+  ellipse(182,114,50,50)
+  ellipse(182,182,50,50)
   //background petals
   
   stroke (141, 134, 227)//muted blue
   strokeWeight(1,1,1,1)
   fill(141,134,227) //muted blue
-  ellipse(225,300,150,80) //petal one
-  ellipse(300,225,80,150) //petal two
-  ellipse(375,300,150,80) //petal three
-  ellipse(300,375,80,150) //petal four
+  ellipse(114,150,80,40) //petal one
+  ellipse(150,114,40,80) //petal two
+  ellipse(182,150,80,40) //petal three
+  ellipse(150,182,40,80) //petal four
   //first layer of petals
   
   stroke(109, 100, 217) //indigo
   strokeWeight(1,1,1,1)
   fill(109,100,217) //indigo
-  ellipse(350,300,120,70) //petal one
-  ellipse(300,245,70,120) //petal two
-  ellipse(250,300,120,70) //petal three
-  ellipse(300,350,70,120) //petal four
+  ellipse(175,150,60,35) //petal one
+  ellipse(150,125,35,60) //petal two
+  ellipse(125,150,60,35) //petal three
+  ellipse(150,175,35,60) //petal four
   //second layer of petals
   
   stroke(232, 115, 72) //pale orange
   fill(232, 115, 72)
-  ellipse(300,300,90,90)
+  ellipse(150,150,40,40)
   //centre of flower
   
   stroke(201, 66, 16) //dark orange/brown
   strokeWeight(10,10,10,10)
-  line(220,220,380,380)
+  line(110,110,190,190)
   //cross like design (part one)
   stroke(201, 66, 16) //dark orange/brown
   strokeWeight(10,10,10,10)
-  line(220,380,380,220)
+  line(110,190,190,110)
   //cross like design (part two)
   stroke(201, 66, 16) //dark orange/brown
   strokeWeight(10,10,10,10)
-  line(150,300,450,300)
+  line(75,150,225,150)
   //cross like design (part three)
   stroke(201, 66, 16) //dark orange/brown 
   strokeWeight(10,10,10)
-  line(300,150,300,450)
+  line(150,75,150,225)
   //cross like design (part four)
   
   stroke(201,66,16) //dark orange/brown
   strokeWeight(7,7,7)
-  ellipse(300,150,15,15) //speck one
-  ellipse(300,300,20,20) //speck two
-  ellipse(300,450,15,15) //speck three
-  ellipse(150,300,15,15) //speck four
-  ellipse(450,300,15,15) //speck five
+  ellipse(150,75,8,8) //speck one
+  ellipse(75,150,8,8) //speck two
+  ellipse(150,225,8,8) //speck three
+  ellipse(75,150,8,8) //speck four
+  ellipse(225,150,8,8) //speck five
   //little pollen specks
   
   fill(201, 66, 16) //dark orange/brown
   stroke(201, 66, 16) //dark orange/brown
-  ellipse(220,220,12,12) //speck one
-  ellipse(220,380,12,12) //speck two
-  ellipse(380,380,12,12) //speck three
-  ellipse(380,220,12,12) //speck four
+  ellipse(110,110,7,7) //speck one
+  ellipse(110,190,7,7) //speck two
+  ellipse(190,190,7,7) //speck three
+  ellipse(190,110,7,7) //speck four
   //smaller pollen specks
   
-  strokeWeight(25,10,8) //line weight
+  strokeWeight(15,10,8) //line weight
   fill(109,100,217)
   stroke(109,100,217)
-  line(275,55,325,95) //line one
-  line(325,55,275,95) //line two
-  line(300,43,300,107) //line three
-  line(265,75,335,75) //line four
+  line(140,30,160,50) //line one
+  line(160,30,140,50) //line two
+  line(150,25,150,55) //line three
+  line(135,40,165,40) //line four
   //smaller flower
   
-  strokeWeight(25,10,8) //line weight
+  strokeWeight(15,10,8) //line weight
   fill(109,100,217)
   stroke(109,100,217)
-  line(275,500,325,545) //line one
-  line(325,500,275,545) //line two
-  line(300,490,300,555) //line three
-  line(265,522,335,522) //line four
+  line(140,250,160,270) //line one
+  line(160,250,140,270) //line two
+  line(150,245,150,275) //line three
+  line(135,260,165,260) //line four
   //smaller flower two
   
   fill(232,115,72) //pale orange 
   stroke(232,115,72) //pale orange
-  ellipse(300,75,5,5) //speck one
+  ellipse(150,40,2,2) //speck one
   //centre of smaller flower
   
   fill(232,115,72) //pale orange
   stroke(232,115,72) //pale orange
-  ellipse(300,525,5,5) //speck two
-  
+  ellipse(150,260,2,2) //speck two
+  //inner centre of smaller flower
+
   fill(201,66,16) //dark orange/brown
   stroke(201,66,16) //dark orange/brown
-  strokeWeight(17,10,10) //stroke weight
-  ellipse(300,75,0.2,0.2) //smaller centre ellipse
-  ellipse(300,525,0.2,0.2) //smaller centre ellipse two
+  strokeWeight(9,10,10) //stroke weight
+  ellipse(150,40,0.1,0.1) //smaller centre ellipse
+  ellipse(150,260,0.1,0.1) //smaller centre ellipse two
   //smaller centre of flowers 
-  
-  fill(232,115,72) //pale orange
-  stroke(232,115,72) //pale orange
-  ellipse(600,0,175,175)
-  ellipse(600,600,175,175)
-  ellipse(0,0,175,175)
-  ellipse(0,600,175,175)
+
+  strokeWeight(0,0,0)
+  arc(0,0,150,150,0,90) //corner design one
+  arc(300,0,150,150,90,180) //corner design two
+  arc(300,0,150,150,180,270) //corner design three
+  arc(300,300,150,150,270,360) //corner design four
   //corner sphere designs
   
-  fill(141,132,227) //muted blue
-  stroke(141,132,227) //muted blue
-  line(0,0,0,55)
-  line(55,0,0,0) //cross design one
-  line(600,600,600,545)
-  line(545,600,600,600) //cross design two
-  line(600,0,545,0)
-  line(600,0,600,55) //cross design three
-  line(0,600,0,545)
-  line(0,600,55,600) //cross design four
-  //corner cross designs
-  
-  fill(149,203,245) //blue
-  stroke(149,203,245) //blue
-  ellipse(35,35,12,12) //sphere one
-  ellipse(565,35,12,12) //sphere two
-  ellipse(35,565,12,12) //sphere three
-  ellipse(565,565,12,12) //sphere four
-  //corner specks
-  
   fill(232,115,72) //pale orange
   stroke(232,115,72) //pale orange
-  ellipse(0,300,80,50) //side design one
-  ellipse(600,300,80,50) //side design two
+  arc(0,150,50,30,270,90) //side design one
+  arc(300,150,50,30,90,30) //side deign two
   //middle side design
+
+  strokeWeight(10,8,8)
+  line(0,0,0,40)
+  line(0,0,40,0)
+  line(0,260,0,300)
+  line(260,0,300,0)
+  //corner cross designs
+
 }
