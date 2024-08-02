@@ -21,9 +21,9 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
  let PetalSizeOne = 45
- let PetalSizeFirstLayer = 50
- let PetalSizeSecondLayer = 25
- let CentreOfFlowerSize = 50
+ let PetalSizeFirstLayer = 55
+ let PetalSizeSecondLayer = 30
+ let CentreOfFlowerSize = 40
  let SmallerCrossLength = 80
  //size perameters
 
