@@ -20,10 +20,16 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
+ let PetalSizeOne = 50
+ let PetalSizeFirstLayer = 40
+ let PetalSizeSecondLayer = 35
+ let CentreOfFlowerSize = 40
+ let SmallerCrossLength = 80
+
   stroke(149, 203, 245) //blue
   fill(149, 203, 245) //blue
-  ellipse(114,182,50,50)
-  ellipse(114,114,50,50)
+  ellipse(114,182,PetalSizeOne,PetalSizeOne)
+  ellipse(114,114,PetalSizeOne,PetalSizeOne)
   ellipse(182,114,50,50)
   ellipse(182,182,50,50)
   //background petals
@@ -31,33 +37,33 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   stroke (141, 134, 227)//muted blue
   strokeWeight(1,1,1,1)
   fill(141,134,227) //muted blue
-  ellipse(114,150,80,40) //petal one
-  ellipse(150,114,40,80) //petal two
-  ellipse(182,150,80,40) //petal three
-  ellipse(150,182,40,80) //petal four
+  ellipse(114,150,PetalSizeFirstLayer+40,PetalSizeFirstLayer) //petal one
+  ellipse(150,114,PetalSizeFirstLayer,PetalSizeFirstLayer+40) //petal two
+  ellipse(182,150,PetalSizeFirstLayer+40,PetalSizeFirstLayer) //petal three
+  ellipse(150,182,PetalSizeFirstLayer,PetalSizeFirstLayer+40) //petal four
   //first layer of petals
   
   stroke(109, 100, 217) //indigo
   strokeWeight(1,1,1,1)
   fill(109,100,217) //indigo
-  ellipse(175,150,60,35) //petal one
-  ellipse(150,125,35,60) //petal two
-  ellipse(125,150,60,35) //petal three
-  ellipse(150,175,35,60) //petal four
+  ellipse(175,150,PetalSizeSecondLayer+25,PetalSizeSecondLayer) //petal one
+  ellipse(150,125,PetalSizeSecondLayer,PetalSizeSecondLayer+25) //petal two
+  ellipse(125,150,PetalSizeSecondLayer+25,PetalSizeSecondLayer) //petal three
+  ellipse(150,175,PetalSizeSecondLayer,PetalSizeSecondLayer+25) //petal four
   //second layer of petals
   
   stroke(232, 115, 72) //pale orange
   fill(232, 115, 72)
-  ellipse(150,150,40,40)
+  ellipse(150,150,CentreOfFlowerSize,CentreOfFlowerSize)
   //centre of flower
   
   stroke(201, 66, 16) //dark orange/brown
   strokeWeight(10,10,10,10)
-  line(110,110,190,190)
+  line(110,110,110+SmallerCrossLength,110+SmallerCrossLength)
   //cross like design (part one)
   stroke(201, 66, 16) //dark orange/brown
   strokeWeight(10,10,10,10)
-  line(110,190,190,110)
+  line(110,110+SmallerCrossLength,110+SmallerCrossLength,110)
   //cross like design (part two)
   stroke(201, 66, 16) //dark orange/brown
   strokeWeight(10,10,10,10)
