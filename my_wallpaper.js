@@ -20,18 +20,19 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
- let PetalSizeOne = 50
- let PetalSizeFirstLayer = 40
- let PetalSizeSecondLayer = 35
- let CentreOfFlowerSize = 40
+ let PetalSizeOne = 45
+ let PetalSizeFirstLayer = 50
+ let PetalSizeSecondLayer = 25
+ let CentreOfFlowerSize = 50
  let SmallerCrossLength = 80
+ //size perameters
 
   stroke(149, 203, 245) //blue
   fill(149, 203, 245) //blue
   ellipse(114,182,PetalSizeOne,PetalSizeOne)
   ellipse(114,114,PetalSizeOne,PetalSizeOne)
-  ellipse(182,114,50,50)
-  ellipse(182,182,50,50)
+  ellipse(182,114,PetalSizeOne,PetalSizeOne)
+  ellipse(182,182,PetalSizeOne,PetalSizeOne)
   //background petals
   
   stroke (141, 134, 227)//muted blue
